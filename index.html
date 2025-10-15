@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Distribuidor Autorizado FWP - Chris Olave</title>
+    <title>Distribuidor Autorizado FWP - JAVI OLIVA</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -11,7 +11,8 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <!-- Se añade Playfair Display para títulos más formales y llamativos -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
     
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -20,8 +21,13 @@
         /* Estilos personalizados para alinear con tu marca */
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #111827; /* Un fondo oscuro y elegante */
-            color: #F3F4F6;
+            background-color: #FFFFFF; /* Fondo Blanco */
+            color: #1F2937; /* Texto Gris Oscuro */
+        }
+        /* Estilo específico para títulos grandes (más formal y llamativo) */
+        .elegant-title {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
         }
 
         /* Colores inspirados en los productos FWP */
@@ -39,42 +45,43 @@
 
         .cta-button {
             transition: all 0.3s ease;
-            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
             font-weight: 600;
         }
 
         .cta-button:hover {
             transform: translateY(-3px) scale(1.05);
-            box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+            box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
         }
 
         .product-card {
             transition: all 0.3s ease;
-            border: 1px solid #374151; /* Borde sutil */
+            background-color: #F9FAFB; /* Fondo de tarjeta gris muy claro */
+            border: 1px solid #E5E7EB; /* Borde sutil */
         }
         
         .product-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
-            border-color: #9CA3AF;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border-color: #D1D5DB;
         }
         
         .product-image {
             height: 250px;
             width: 100%;
-            object-fit: contain; /* Asegura que la imagen se vea completa */
+            object-fit: contain; 
         }
     </style>
 </head>
 <body class="antialiased">
 
     <!-- Menú de Navegación -->
-    <nav class="bg-gray-900/80 backdrop-blur-sm shadow-lg sticky top-0 z-50">
+    <nav class="bg-gray-900/90 backdrop-blur-sm shadow-lg sticky top-0 z-50">
         <div class="container mx-auto px-6 py-3">
             <div class="flex items-center justify-between">
                 <div>
                     <a class="text-white text-2xl font-bold" href="#">
-                        <span class="fwp-pink">FWP</span> <span class="text-gray-300">Chris Olave</span>
+                        <span class="fwp-pink">FWP</span> <span class="text-white">JAVI OLIVA</span>
                     </a>
                 </div>
                 <!-- Menú para Desktop -->
@@ -102,12 +109,12 @@
     </nav>
 
     <!-- Sección Hero -->
-    <header class="bg-gray-900 text-center py-20 md:py-32">
+    <header class="bg-gray-100 text-center py-20 md:py-32">
         <div class="container mx-auto px-6">
-            <h1 class="text-4xl md:text-6xl font-black text-white leading-tight">
+            <h1 class="text-4xl md:text-6xl font-black text-gray-900 leading-tight">
                 Transforma tu Bienestar, <span class="fwp-pink">Potencia tu Vida</span>
             </h1>
-            <p class="mt-4 text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
+            <p class="mt-4 text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
                 Descubre la línea de productos FWP diseñados con la más alta tecnología para optimizar tu salud y energía diaria.
             </p>
             <a href="#productos" class="mt-8 inline-block cta-button bg-fwp-pink text-white text-lg px-8 py-3 rounded-lg">
@@ -117,47 +124,47 @@
     </header>
 
     <!-- Sección de Productos -->
-    <main id="productos" class="py-20">
+    <main id="productos" class="py-20 bg-white">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12">Nuestros Productos Estrella</h2>
+            <h2 class="text-4xl md:text-5xl elegant-title text-center text-gray-900 mb-12">Nuestros Productos Estrella</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
 
                 <!-- Producto 1: Renöva Plus -->
-                <div class="product-card bg-gray-800 rounded-lg overflow-hidden shadow-xl">
-                    <div class="p-6 bg-gray-900">
-                         <img src="images/MOCKUP-renova-CHILE.png" alt="Producto Renöva Plus de FWP" class="product-image mx-auto">
+                <div class="product-card rounded-lg overflow-hidden shadow-md">
+                    <div class="p-6 bg-gray-50">
+                         <!-- IMAGEN RENOVA ACTUALIZADA -->
+                         <img src="images/RENOVA SIN FONDOS" alt="Producto Renöva Plus de FWP" class="product-image mx-auto">
                     </div>
                     <div class="p-6 text-center">
                         <h3 class="text-2xl font-bold fwp-pink mb-2">Renöva Plus</h3>
-                        <p class="text-gray-400 mb-6 h-20">La dosis diaria de juventud con Colágeno, Resveratrol y Coenzima Q10 para una piel radiante y articulaciones fuertes.</p>
-                        <!-- MEJORA: Se estandariza a ruta relativa para mayor portabilidad del sitio. -->
+                        <p class="text-gray-600 mb-6 h-20">La dosis diaria de juventud con Colágeno, Resveratrol y Coenzima Q10 para una piel radiante y articulaciones fuertes.</p>
                         <a href="renova.html" class="cta-button inline-block bg-fwp-pink text-white px-6 py-2 rounded-md">Ver más</a>
                     </div>
                 </div>
 
                 <!-- Producto 2: 24Burn -->
-                <div class="product-card bg-gray-800 rounded-lg overflow-hidden shadow-xl">
-                    <div class="p-6 bg-gray-900">
-                        <img src="images/24burn-pote-transparente.png.png" alt="Producto 24Burn de FWP" class="product-image mx-auto">
+                <div class="product-card rounded-lg overflow-hidden shadow-md">
+                    <div class="p-6 bg-gray-50">
+                        <!-- IMAGEN 24BURN ACTUALIZADA -->
+                        <img src="images/24 BURN SIN FONDO" alt="Producto 24Burn de FWP" class="product-image mx-auto">
                     </div>
                     <div class="p-6 text-center">
                         <h3 class="text-2xl font-bold fwp-green mb-2">24Burn</h3>
-                        <p class="text-gray-400 mb-6 h-20">Activa tu metabolismo y reduce medidas con la poderosa combinación de Té Verde, Panax Ginseng y L-Carnitina.</p>
-                        <!-- CORRECCIÓN: Se agrega el enlace a la página del producto. -->
+                        <p class="text-gray-600 mb-6 h-20">Activa tu metabolismo y reduce medidas con la poderosa combinación de Té Verde, Panax Ginseng y L-Carnitina.</p>
                         <a href="24burn.html" class="cta-button inline-block bg-fwp-green text-white px-6 py-2 rounded-md">Ver más</a>
                     </div>
                 </div>
 
                 <!-- Producto 3: E-Boost -->
-                <div class="product-card bg-gray-800 rounded-lg overflow-hidden shadow-xl">
-                    <div class="p-6 bg-gray-900">
-                        <img src="images/MOCKUP-CAJA-EBOOST-CHILE.png" alt="Producto E-Boost de FWP" class="product-image mx-auto">
+                <div class="product-card rounded-lg overflow-hidden shadow-md">
+                    <div class="p-6 bg-gray-50">
+                        <!-- IMAGEN E-BOOST ACTUALIZADA -->
+                        <img src="images/EBOOST SIN FONDO" alt="Producto E-Boost de FWP" class="product-image mx-auto">
                     </div>
                     <div class="p-6 text-center">
                         <h3 class="text-2xl font-bold fwp-orange mb-2">E-Boost</h3>
-                        <p class="text-gray-400 mb-6 h-20">El impulso de energía inteligente que necesitas para superar tu rutina diaria, con Guaraná, Té Negro y Yerba Mate.</p>
-                        <!-- CORRECCIÓN: Se agrega el enlace a la página del producto. -->
+                        <p class="text-gray-600 mb-6 h-20">El impulso de energía inteligente que necesitas para superar tu rutina diaria, con Guaraná, Té Negro y Yerba Mate.</p>
                         <a href="eboost.html" class="cta-button inline-block bg-fwp-orange text-white px-6 py-2 rounded-md">Ver más</a>
                     </div>
                 </div>
@@ -169,7 +176,7 @@
     <!-- Footer -->
     <footer class="bg-gray-900 text-gray-400 py-8">
         <div class="container mx-auto px-6 text-center">
-            <p>&copy; 2025 Chris Olave - Distribuidor Autorizado FWP. Todos los derechos reservados.</p>
+            <p>&copy; 2025 JAVI OLIVA - Distribuidor Autorizado FWP. Todos los derechos reservados.</p>
             <p class="text-xs mt-2">Los suplementos alimenticios no reemplazan una dieta equilibrada.</p>
         </div>
     </footer>
