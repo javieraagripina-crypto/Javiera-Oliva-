@@ -71,6 +71,31 @@
             width: 100%;
             object-fit: contain; 
         }
+        
+        /* Estilo para la nueva sección de testimonio */
+        .testimonio-card {
+            background-color: #FEF3F8; /* Fondo rosa muy claro para resaltar */
+            border: 2px solid #E5007E;
+        }
+
+        /* Contenedor de Video Responsivo */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            margin-top: 2rem;
+            border-radius: 0.5rem; /* rounded-lg */
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -88,7 +113,7 @@
                 <div class="hidden md:flex items-center space-x-6">
                     <a class="text-gray-300 hover:fwp-pink transition-colors duration-300" href="#">Inicio</a>
                     <a class="text-gray-300 hover:fwp-pink transition-colors duration-300" href="#productos">Productos</a>
-                    <a class="text-gray-300 hover:fwp-pink transition-colors duration-300" href="#">Sobre Nosotros</a>
+                    <a class="text-gray-300 hover:fwp-pink transition-colors duration-300" href="#historia">Mi Proceso</a>
                     <a class="text-gray-300 hover:fwp-pink transition-colors duration-300" href="#">Contacto</a>
                 </div>
                 <!-- Botón de Menú para Móvil -->
@@ -102,7 +127,7 @@
             <div id="mobile-menu" class="hidden md:hidden py-4">
                 <a href="#" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-700 rounded">Inicio</a>
                 <a href="#productos" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-700 rounded">Productos</a>
-                <a href="#" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-700 rounded">Sobre Nosotros</a>
+                <a href="#historia" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-700 rounded">Mi Proceso</a>
                 <a href="#" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-700 rounded">Contacto</a>
             </div>
         </div>
@@ -117,8 +142,23 @@
             <p class="mt-4 text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
                 Descubre la línea de productos FWP diseñados con la más alta tecnología para optimizar tu salud y energía diaria.
             </p>
-            <a href="#productos" class="mt-8 inline-block cta-button bg-fwp-pink text-white text-lg px-8 py-3 rounded-lg">
-                Ver Productos
+            
+            <!-- Video de YouTube insertado aquí -->
+            <div class="max-w-4xl mx-auto">
+                <div class="video-container shadow-2xl">
+                    <iframe 
+                        src="https://www.youtube.com/embed/_ITOZ9p-74k?autoplay=0" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen
+                        title="Video Oportunidad FWP"
+                    ></iframe>
+                </div>
+            </div>
+            <!-- Fin del Video -->
+
+            <a href="https://wa.link/kc65w2" class="mt-8 inline-block cta-button bg-fwp-pink text-white text-lg px-8 py-3 rounded-lg">
+                ¡QUIERO CONOCER LA OPORTUNIDAD!
             </a>
         </div>
     </header>
@@ -134,7 +174,7 @@
                 <div class="product-card rounded-lg overflow-hidden shadow-md">
                     <div class="p-6 bg-gray-50">
                          <!-- IMAGEN RENOVA ACTUALIZADA -->
-                         <img src="images/RENOVAPNG.PNG" alt="Producto Renöva Plus de FWP" class="product-image mx-auto">
+                         <img src="images/RENOVA SIN FONDOS" alt="Producto Renöva Plus de FWP" class="product-image mx-auto">
                     </div>
                     <div class="p-6 text-center">
                         <h3 class="text-2xl font-bold fwp-pink mb-2">Renöva Plus</h3>
@@ -147,7 +187,7 @@
                 <div class="product-card rounded-lg overflow-hidden shadow-md">
                     <div class="p-6 bg-gray-50">
                         <!-- IMAGEN 24BURN ACTUALIZADA -->
-                        <img src="images/24BURNPNG.PNG" alt="Producto 24Burn de FWP" class="product-image mx-auto">
+                        <img src="images/24 BURN SIN FONDO" alt="Producto 24Burn de FWP" class="product-image mx-auto">
                     </div>
                     <div class="p-6 text-center">
                         <h3 class="text-2xl font-bold fwp-green mb-2">24Burn</h3>
@@ -160,7 +200,7 @@
                 <div class="product-card rounded-lg overflow-hidden shadow-md">
                     <div class="p-6 bg-gray-50">
                         <!-- IMAGEN E-BOOST ACTUALIZADA -->
-                        <img src="images/EBOOSTPNG.PNG" alt="Producto E-Boost de FWP" class="product-image mx-auto">
+                        <img src="images/EBOOST SIN FONDO" alt="Producto E-Boost de FWP" class="product-image mx-auto">
                     </div>
                     <div class="p-6 text-center">
                         <h3 class="text-2xl font-bold fwp-orange mb-2">E-Boost</h3>
@@ -172,6 +212,60 @@
             </div>
         </div>
     </main>
+    
+    <!-- Sección de Testimonio Personal (¡NUEVO!) -->
+    <section id="historia" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl elegant-title text-center fwp-pink mb-12">Mi Historia FWP</h2>
+
+            <div class="testimonio-card p-8 rounded-xl shadow-lg flex flex-col md:flex-row items-center gap-8">
+                
+                <!-- Columna de la Imagen -->
+                <div class="w-full md:w-1/4 flex-shrink-0 text-center">
+                    <!-- RUTA DE IMAGEN ACTUALIZADA -->
+                    <img src="images/mitestimoniojpeg" alt="Foto de Javi Oliva, emprendedora FWP" class="w-48 h-48 rounded-full mx-auto object-cover border-4 border-fwp-pink">
+                    <h3 class="text-2xl font-bold text-gray-900 mt-4">Javi Oliva, 20 años</h3>
+                    <p class="text-sm text-gray-600">Emprendedora FWP</p>
+                </div>
+
+                <!-- Columna del Testimonio -->
+                <div class="w-full md:w-3/4">
+                    <p class="text-xl italic text-gray-800 leading-relaxed">
+                        "Sentía que mi camino universitario era limitado y no me daría la **autonomía** ni el **impacto económico** que necesitaba. Por eso, decidí emprender con FWP.
+                    </p>
+                    <p class="text-xl italic text-gray-800 leading-relaxed mt-4">
+                        Lo más increíble es esto: en solo **cinco meses**, he logrado construir una base de ingresos y una **independencia de tiempo** que, honestamente, en el camino tradicional me habría tomado cinco años o más.
+                    </p>
+                    <p class="text-xl font-semibold text-gray-800 leading-relaxed mt-4">
+                        Esta es la verdadera diferencia: no solo tengo libertad de tiempo, sino que estoy activamente construyendo mi gran objetivo económico, rodeada de una **comunidad de crecimiento**.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Información de Contacto Personal -->
+            <div class="mt-12 text-center">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">CONTÁCTAME:</h3>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+                    
+                    <!-- Instagram -->
+                    <div class="flex items-center text-gray-800 text-xl">
+                        <i class="fab fa-instagram text-fwp-pink text-3xl mr-3"></i>
+                        <a href="https://www.instagram.com/JAVIOLIVAC" target="_blank" class="hover:text-fwp-pink transition-colors font-semibold">
+                            @JAVIOLIVAC
+                        </a>
+                    </div>
+
+                    <!-- Teléfono -->
+                    <div class="flex items-center text-gray-800 text-xl">
+                        <i class="fas fa-phone-alt text-fwp-pink text-3xl mr-3"></i>
+                        <a href="tel:+56921644144" class="hover:text-fwp-pink transition-colors font-semibold">
+                            +56 9 2164 4144
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-gray-400 py-8">
